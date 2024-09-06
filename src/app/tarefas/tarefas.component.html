@@ -1,0 +1,4 @@
+<po-page-default p-title="Minhas Tarefas">
+    <po-select name="priorityFilter" p-label="Filtrar por Prioridade" [(ngModel)]="filter" [p-options]="priorities"></po-select>
+    <po-list [p-items]="filteredTasks"></po-list>
+  </po-page-default>

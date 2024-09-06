@@ -1,0 +1,11 @@
+<po-page-default p-title="Nova Tarefa">
+    <form>
+      <po-input name="taskName" p-label="Nome da Tarefa" [(ngModel)]="task.name"></po-input>
+      <po-datepicker name="startDate" p-label="Data de Início" [(ngModel)]="task.startDate"></po-datepicker>
+      <po-datepicker name="endDate" p-label="Data de Término" [(ngModel)]="task.endDate"></po-datepicker>
+      <po-select name="priority" p-label="Prioridade" [(p-model)]="task.priority" [p-options]="priorities"></po-select>
+      <po-button p-label="Incluir Tarefa" (p-click)="saveTask()"></po-button>
+      <po-button p-label="Voltar" p-type="secondary" (p-click)="goBack()"></po-button>
+      <po-button p-label="Adicionar Sub-tarefa" p-type="link" (p-click)="addSubTask()"></po-button>
+    </form>
+  </po-page-default>
